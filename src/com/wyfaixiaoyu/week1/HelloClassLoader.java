@@ -7,24 +7,21 @@ import java.lang.reflect.Method;
 
 public class HelloClassLoader extends ClassLoader{
 	public static void main(String[] args) {
-		HelloClassLoader helloClassLoader = new HelloClassLoader();
 		try {
-			try {
-				Class<?> hello = helloClassLoader.findClass("Hello");
-				Method mtd = hello.getMethod("hello");
-				Object o = hello.newInstance();
-				mtd.invoke(o, null);
-			} catch (NoSuchMethodException e) {
-				e.printStackTrace();
-			} catch (IllegalAccessException e) {
-				e.printStackTrace();
-			} catch (InstantiationException e) {
-				e.printStackTrace();
-			} catch (InvocationTargetException e) {
-				e.printStackTrace();
-			}
-
+			HelloClassLoader helloClassLoader = new HelloClassLoader();
+			Class<?> helloClass = helloClassLoader.findClass("Hello");
+			Method mtd = helloClass.getMethod("hello");
+			Object hello = helloClass.newInstance();
+			mtd.invoke(hello, null);
 		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (NoSuchMethodException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (InvocationTargetException e) {
 			e.printStackTrace();
 		}
 	}

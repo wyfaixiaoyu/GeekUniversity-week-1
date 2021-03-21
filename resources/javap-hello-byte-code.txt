@@ -1,0 +1,102 @@
+Classfile /home/huyang/project/src/git.yuxiaor.com/wyfaixiaoyu/GeekUniversity-week-1/src/com/wyfaixiaoyu/week1/HelloByteCode.class
+  Last modified Mar 21, 2021; size 468 bytes
+  MD5 checksum 2f435c9932a04aca6a39ff8cb8809edf
+  Compiled from "HelloByteCode.java"
+public class com.wyfaixiaoyu.week1.HelloByteCode
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #3.#14         // java/lang/Object."<init>":()V
+   #2 = Class              #15            // com/wyfaixiaoyu/week1/HelloByteCode
+   #3 = Class              #16            // java/lang/Object
+   #4 = Utf8               <init>
+   #5 = Utf8               ()V
+   #6 = Utf8               Code
+   #7 = Utf8               LineNumberTable
+   #8 = Utf8               main
+   #9 = Utf8               ([Ljava/lang/String;)V
+  #10 = Utf8               StackMapTable
+  #11 = Class              #17            // "[Ljava/lang/String;"
+  #12 = Utf8               SourceFile
+  #13 = Utf8               HelloByteCode.java
+  #14 = NameAndType        #4:#5          // "<init>":()V
+  #15 = Utf8               com/wyfaixiaoyu/week1/HelloByteCode
+  #16 = Utf8               java/lang/Object
+  #17 = Utf8               [Ljava/lang/String;
+{
+  public com.wyfaixiaoyu.week1.HelloByteCode();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LineNumberTable:
+        line 3: 0
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=2, locals=8, args_size=1
+         0: iconst_3
+         1: istore_1
+         2: iconst_4
+         3: istore_2
+         4: iconst_5
+         5: istore_3
+         6: bipush        6
+         8: istore        4
+        10: iconst_0
+        11: istore        5
+        13: iload         4
+        15: iload_3
+        16: if_icmple     26
+        19: iload         4
+        21: istore        5
+        23: goto          29
+        26: iload_3
+        27: istore        5
+        29: iconst_0
+        30: istore        6
+        32: iconst_0
+        33: istore        7
+        35: iload         7
+        37: iconst_4
+        38: if_icmpge     54
+        41: iload         6
+        43: iload         7
+        45: iadd
+        46: istore        6
+        48: iinc          7, 1
+        51: goto          35
+        54: return
+      LineNumberTable:
+        line 5: 0
+        line 6: 2
+        line 7: 4
+        line 8: 6
+        line 9: 10
+        line 10: 13
+        line 11: 19
+        line 13: 26
+        line 15: 29
+        line 16: 32
+        line 17: 41
+        line 16: 48
+        line 19: 54
+      StackMapTable: number_of_entries = 4
+        frame_type = 255 /* full_frame */
+          offset_delta = 26
+          locals = [ class "[Ljava/lang/String;", int, int, int, int, int ]
+          stack = []
+        frame_type = 2 /* same */
+        frame_type = 253 /* append */
+          offset_delta = 5
+          locals = [ int, int ]
+        frame_type = 250 /* chop */
+          offset_delta = 18
+}
+SourceFile: "HelloByteCode.java"
